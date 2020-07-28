@@ -1,4 +1,4 @@
-const { bdName, bdUser, bdHost, bdPass } = require('./config')
+const { bdName, bdUser, bdHost, bdPass } = require('./env.config')
 
 module.exports = {
   HOST: bdHost,

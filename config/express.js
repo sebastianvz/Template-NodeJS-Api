@@ -9,7 +9,6 @@ const errorHandler = require('errorhandler')
 
 module.exports = (app) => {
   const env = app.get('env')
-
   app.use(compression())
   app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }))
   app.use(bodyParser.json({ limit: '50mb' }))
