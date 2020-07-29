@@ -6,7 +6,6 @@ const router = new Router()
 
 // All Verbs
 router.get('/', auth, controller.findAll)
-router.post('/test', controller.testEmail)
 router.post('/login', controller.login)
 router.post('/create', controller.create)
 

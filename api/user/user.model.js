@@ -48,7 +48,7 @@ User.generateAuthToken = async function (newUser) {
 }
 
 User.findByCredentials = async (credentials, result) => {
-  await User.findByEmail(credentials.email, (err, data) => {
+  User.findByEmail(credentials.email, (err, data) => {
     if (err) {
       console.log('error: ', err)
       result(err, null)
@@ -96,7 +96,7 @@ User.findByKey = (data, result) => {
       return
     }
     if (res.length) {
-      console.log('found customer: ', res[0])
+      console.log(`found : ${table}`, res[0])
       result(null, res[0])
       return
     }

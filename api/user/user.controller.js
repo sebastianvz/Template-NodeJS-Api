@@ -14,7 +14,7 @@ async function findAll (req, res) {
   })
 }
 
-async function testEmail (req, res) {
+async function findByKey (req, res) {
   try {
     const { email } = req.body
     await User.findByCredentials(email, (err, data) => {
@@ -84,4 +84,4 @@ async function login (req, res) {
   }
 }
 
-module.exports = { findAll, create, login, testEmail }
+module.exports = { findAll, create, login, findByKey }
